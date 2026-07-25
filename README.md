@@ -24,7 +24,7 @@ CLFNN is a object-oriented, comprehensive multilayer perceptron library built co
 ## Features
 
 - **Custom Matrix Engine**
-  - Cache-optimized matrix operations.
+  - Cache-optimized matrix multiplication.
   - Supports fundamental algebraic operations, transpositions, and Hadamard products.
 - **Strictly Object-Oriented Design**
   - Seamless modularity via `ILayer`, `ILoss`, and `IActivation` interfaces.
