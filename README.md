@@ -61,7 +61,7 @@ g++ -O3 your_main.cpp src/*.cpp -I include -o your_executable
 ```
 
 ### Example Code
-Example of loading data, building network, training model and applying it for prediction
+Example of loading data, building network, training model and applying it for prediction:
 ```C++
 #include "clfnn.h"
 
