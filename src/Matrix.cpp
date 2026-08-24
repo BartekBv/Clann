@@ -127,3 +127,12 @@ void Matrix::print() const {
         std::cout << "]" << std::endl;
     }
 }
+
+void Matrix::save(std::ofstream& out) const {
+    out.write(reinterpret_cast<const char*>(&rows), sizeof(rows));
+    out.wtire(reinterpret_cast<const char*>(&cols), sizeof(cols));
+
+    for(int i = 0; i < rows; ++i) {
+        out.write(reinterpter_cast<const char*>(data[i].data()), cols * sizeof(double));
+    }
+}
