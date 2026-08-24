@@ -136,3 +136,14 @@ void Matrix::save(std::ofstream& out) const {
         out.write(reinterpter_cast<const char*>(data[i].data()), cols * sizeof(double));
     }
 }
+
+void Matrix::load(std:ifstream& in) {
+    in.read(reinterpret_cast<char*>(&rows), sizeof(rows));
+    in.read(reinterpret_cast<char*>(&cols), sizeof(cols));
+
+    data.assign(rows, std::vector<double>(cols, 0.0));
+
+    for(int i = 0; i < rows; ++i){
+        in.read(reinterpret_cast<const char*>(data[i].data()), cols* sizeof(double))
+    }
+}
