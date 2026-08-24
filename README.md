@@ -5,7 +5,7 @@
 
 **C++ Library for Feedforward Neural Networks**
 
-CLFNN is a object-oriented, comprehensive multilayer perceptron library built completely from scratch. It relies solely on C++ standard library, featuring its own custom-built mathematical engine. It provides functionalities such as:
+CLFNN is a object-oriented, multilayer perceptron library built completely from scratch. It relies solely on C++ standard library, featuring its own custom-built mathematical engine. It provides functionalities such as:
 * loading data
 * building custom dense layers
 * training neural networks using gradient-descent with backpropagation
@@ -24,7 +24,7 @@ CLFNN is a object-oriented, comprehensive multilayer perceptron library built co
 ## Features
 
 - **Custom Matrix Engine**
-  - Cache-optimized matrix operations.
+  - Cache-optimized matrix multiplication.
   - Supports fundamental algebraic operations, transpositions, and Hadamard products.
 - **Strictly Object-Oriented Design**
   - Seamless modularity via `ILayer`, `ILoss`, and `IActivation` interfaces.
@@ -61,7 +61,7 @@ g++ -O3 your_main.cpp src/*.cpp -I include -o your_executable
 ```
 
 ### Example Code
-Example of loading data, building network, training model and applying it for prediction
+Example of loading data, building network, training model and applying it for prediction:
 ```C++
 #include "clfnn.h"
 
