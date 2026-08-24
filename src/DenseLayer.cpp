@@ -57,3 +57,8 @@ const Matrix& DenseLayer::getWeights() const {
 const Matrix& DenseLayer::getBiases() const {
     return this->biases;
 }
+
+void DenseLayer::save(std::ofstream& out) const {
+    weights.save(out);
+    biases.save(out);
+}
