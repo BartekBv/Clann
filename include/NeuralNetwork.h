@@ -25,4 +25,7 @@ class NeuralNetwork {
         void train(const Matrix& input, const Matrix& target, int epochs = DEF_EPOCHS, double lr = DEF_LR, bool printProgress = false);
         Matrix predict(const Matrix& input) const;
         void setLossFunction(ILoss* newLoss);
+
+        void saveModel(const std::filesystem::path& filepath) const;
+        void loadModel(const std::filesystem::path& filepath);
 };
