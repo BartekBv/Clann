@@ -62,3 +62,8 @@ void DenseLayer::save(std::ofstream& out) const {
     weights.save(out);
     biases.save(out);
 }
+
+void DenseLayer::load(std::ifstream& in) {
+    weights.load(in);
+    biases.load(in);
+}

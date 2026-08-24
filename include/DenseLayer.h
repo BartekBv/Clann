@@ -2,6 +2,7 @@
 #include "ILayer.h"
 #include "IActivation.h"
 #include "Matrix.h"
+#include <fstream>
 
 /**
  * @brief Warstwa w pełni połączona sieci neuronowej.
@@ -30,4 +31,7 @@ class DenseLayer : public ILayer {
 
         const Matrix& getWeights() const override;
         const Matrix& getBiases() const override;
+
+        void save(std::ofstream& out) const override;
+        void load(std::ifstream& in) override;
 };
