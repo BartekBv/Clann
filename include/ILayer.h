@@ -16,4 +16,7 @@ class ILayer {
 
         virtual const Matrix& getWeights() const = 0;
         virtual const Matrix& getBiases() const = 0;
+
+        virtual void save(std::ofstream& out) const = 0;
+        virtual void load(std::ifstream& in) = 0;
 };
