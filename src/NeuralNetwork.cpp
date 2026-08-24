@@ -79,3 +79,16 @@ void NeuralNetwork::saveModel(const std::filesystem::path& filepath) const {
     
     out.close();
 }
+
+void NeuralNetwork::loadModel(const std::filesystem::path& filepath) {
+    std::ifstream in(filepath, std::ios::binary);
+    if (!in) {
+        throw std::runtime_error("Nie można otworzyć pliku do odczytu modelu.");
+    }
+
+    for (const auto& layer : layers) {
+        layer->load(in);
+    }
+    
+    in.close();
+}
