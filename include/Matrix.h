@@ -1,6 +1,7 @@
 #pragma once
 #include<stdexcept>
 #include<vector>
+#include<fstream>
 
 /**
  * @brief Klasa reprezentująca dwuwymiarową macierz danych.
@@ -32,4 +33,7 @@ class Matrix {
         const double& operator()(int row, int col) const;
 
         void print() const;
+
+        void save(std::ofstream& out) const;
+        void load(std::ifstream& in);
 };
