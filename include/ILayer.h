@@ -14,6 +14,6 @@ class ILayer {
         virtual Matrix backward(const Matrix& gradOutput) = 0;
         virtual void updateWeights(double learningRate) = 0;
 
-        virtual Matrix getWeights() const = 0;
-        virtual Matrix getBiases() const = 0;
+        virtual const Matrix& getWeights() const = 0;
+        virtual const Matrix& getBiases() const = 0;
 };
