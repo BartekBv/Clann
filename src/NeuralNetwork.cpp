@@ -1,6 +1,8 @@
 #include "../include/NeuralNetwork.h"
 #include <iostream>
 #include <iomanip>
+#include <fstream>
+#include<stdexcept>
 
 NeuralNetwork::NeuralNetwork(ILoss* loss) : lossFunction(loss) {}
 
@@ -61,4 +63,19 @@ Matrix NeuralNetwork::predict(const Matrix& input) const {
 
 void NeuralNetwork::setLossFunction(ILoss* newLoss) {
     this->lossFunction = newLoss;
+}
+
+
+
+void NeuralNetwork::saveModel(const std::filesystem::path& filepath) const {
+    std::ofstream out(filepath, std::ios::binary);
+    if (!out) {
+        throw std::runtime_error("Nie można otworzyć pliku do zapisu modelu.");
+    }
+
+    for (const auto& layer : layers) {
+        layer->save(out);
+    }
+    
+    out.close();
 }

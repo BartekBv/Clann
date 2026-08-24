@@ -1,5 +1,6 @@
 #pragma once
 #include "Matrix.h"
+#include <fstream>
 
 /**
  * @brief Interfejs dla warstw sieci neuronowej.
