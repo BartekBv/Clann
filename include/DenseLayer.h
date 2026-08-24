@@ -28,6 +28,6 @@ class DenseLayer : public ILayer {
         Matrix backward(const Matrix& outputGrad) override;
         void updateWeights(double learningRate) override;
 
-        Matrix getWeights() const override;
-        Matrix getBiases() const override;
+        const Matrix& getWeights() const override;
+        const Matrix& getBiases() const override;
 };

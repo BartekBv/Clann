@@ -50,10 +50,10 @@ void DenseLayer::updateWeights(double learningRate) {
     this->biases = this->biases.subtract(this->current_db.multScalar(learningRate));
 }
 
-Matrix DenseLayer::getWeights() const {
+const Matrix& DenseLayer::getWeights() const {
     return this->weights;
 }
 
-Matrix DenseLayer::getBiases() const {
+const Matrix& DenseLayer::getBiases() const {
     return this->biases;
 }
