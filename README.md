@@ -38,7 +38,7 @@ CLFNN is a object-oriented, multilayer perceptron library built completely from 
 ## Requirements
 
 - **C++ Compiler**: Version supporting C++17 or newer (e.g., GCC 8+, Clang 5+, MSVC 19.15+).
-- **Python** (Optional): For running data preprocessing script and Jupyter notebook.
+- **Python** (Optional): For running data preprocessing script.
 
 ## Installation
 
